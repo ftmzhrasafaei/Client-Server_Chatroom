@@ -1,14 +1,14 @@
 # Client-Server_Chatroom
 This is a client-server chatroom in Python
 
-##Overview of files
+## Overview of files
 There are two .py files named "server.py" and "client.py".
 Run "server.py": Server will listen on port "1237" of the localhost.
 The sever use multithreading to handle each client; therefore, there will be #client + 1(for listening) threats
 Then run "client.py" as many times you wish to have clients. Each client will bind on the server with a random port.
 The client use three threads: 1- the main thread, 2- listening to the server, 3- sending data to the server: using 2rd and 3rd threads, the client can listen and send data simultaneously.
 
-##Overview of functionality
+## Overview of functionality
 The client can send any message to the server, but there are some special messages that the server handles in a specific way.
 1- "getAllPorts": as the result of sending this message to the server, the server sends the ports of all other clients connected to it.
 2- "create group $groupName": the client can create a group using this command
